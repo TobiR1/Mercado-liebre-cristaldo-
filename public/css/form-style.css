@@ -1,0 +1,205 @@
+label,
+p {
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: #666;
+}
+
+input {
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.small-input {
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+.create-form {
+    margin: auto;
+    width: 95w;
+    font-size: 1em;
+    border: 1px black solid;
+    padding: 40px 15px 15px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    border-top: #eac926 groove 10px;
+}
+
+.form-field {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+
+.required-label::after {
+    font-family: "Font Awesome 5 Free";
+
+    display: inline-block;
+    padding: 0px 3px;
+    vertical-align: middle;
+    font-weight: 900;
+}
+.required-label::after {
+    content: "\f359";
+    color: #eac926;
+}
+
+input:valid + .required-label::after {
+    content: "\f058";
+    color: #39b54a;
+}
+
+input:focus:invalid + .required-label::after {
+    content: "\f057";
+    color: #8a0000;
+}
+
+.data {
+    width: 100%;
+    position: relative;
+}
+
+.required-label,
+.label-tag {
+    position: absolute;
+    left: 8px;
+    background-color: white;
+    padding: 0px 2px;
+    top: 0;
+}
+
+.label-tag {
+    top: -0.3em;
+}
+
+.data input,
+.data select {
+    margin-top: 0.6em;
+    width: 100%;
+    height: 3em;
+    padding-left: 5px;
+    border: 1px solid #666;
+}
+
+.data-checkbox {
+    position: relative;
+    border: #666 solid 1px;
+    padding: 10px;
+    width: 100%;
+}
+
+.data-checkbox .label-tag {
+    top: -1.1em;
+}
+
+label {
+    display: block;
+    margin-top: 5px;
+}
+
+input[type="checkbox"]:checked + label::after {
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    display: inline;
+    padding: 0px 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    content: "\f058";
+    color: #39b54a;
+}
+
+input[type="checkbox"] {
+    display: contents;
+}
+
+.validation {
+    /* visibility: hidden; */
+    display: block;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px 5px;
+    font-size: 0.8rem;
+    font-weight: 200;
+    background-color: #8a0000;
+    color: white;
+    height: 3em;
+    border-radius: 5px;
+}
+
+
+.data-button select {
+    display: block;
+    padding: 12px;
+    border: #666 solid 1px;
+    margin: 10px 0px;
+    width: 100%;
+    left: 0px;
+    height: 3em;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#file-upload {
+    left: 0px;
+}
+
+#custom-file-upload {
+    border: 1px solid #666;
+    display: inline-block;
+    padding: 24px;
+    cursor: pointer;
+    margin: 10px 0px;
+    width: 100%;
+    left: 0px;
+    text-align: center;
+}
+
+.big-upload {
+    font-size: 3em;
+}
+
+.button-wrapper {
+    display: flex;
+}
+
+button {
+    flex-grow: 1;
+    background-color: #eac926;
+    font-size: 1.5em;
+    display: block;
+    margin: 20px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0022aa;
+}
+
+button[type="reset"] {
+    font-size: 1em;
+}
+
+@media (min-width: 480px) {
+    .create-form {
+        width: 400px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .form-field {
+        position: relative;
+        margin-bottom: 3em;
+    }
+    .validation {
+        position: absolute;
+        top: 15%;
+        left: 102%;
+        width: max-content;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
